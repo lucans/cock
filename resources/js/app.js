@@ -1,7 +1,7 @@
 var app = angular.module('cock', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/Home");
+    $urlRouterProvider.otherwise("app/Home");
     $stateProvider        
         .state('menu', {
           url: "/app",
