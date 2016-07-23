@@ -1,0 +1,70 @@
+.card{
+	border-radius: 2px;
+	margin: 0.3px;
+	margin-bottom: 10px;
+	padding: 0px;
+	border: none;
+}
+.card .form-control{
+	border-radius: 0px;
+	padding: 3px;
+}
+
+.card .input-group{
+	padding: 3px;
+}
+
+.card .btn{
+	border-radius: 2px;
+}
+
+.card hr{
+	color: white;
+	width: 80%;
+}
+
+.card h1, h2, h3, h4, h5{
+	width: 100%;
+	padding: 3px;
+	font-weight: bold;
+	letter-spacing: 3px
+}
+
+
+.card-heading{
+	top: 0px;
+	width: 100%;
+	border-bottom: 2px white solid;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	border-radius: 2px;
+}
+
+.card-body{
+	text-align: center;
+	margin: 0.1px;
+}
+
+.card-footer{
+	bottom: 0px;
+	width: 100%;
+	position: absolute;
+}
+
+.card-5{
+	height: 250px;
+}
+.card-4{
+	height: 200px;
+}
+.card-3{
+	height: 150px;
+}
+.card-2{
+	height: 100px;
+}
+.card-1{
+	height: 50px;
+}
