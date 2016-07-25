@@ -1,6 +1,6 @@
 .card{
 	border-radius: 2px;
-	margin: 0.3px;
+	/*margin: 0.3px;*/
 	margin-bottom: 10px;
 	padding: 0px;
 	border: none;
@@ -34,7 +34,7 @@
 .card-heading{
 	top: 0px;
 	width: 100%;
-	border-bottom: 2px white solid;
+	border-bottom: 4px white;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -45,6 +45,16 @@
 .card-body{
 	text-align: center;
 	margin: 0.1px;
+}
+
+.card-title{
+	border-bottom: 0.5px white solid;
+	border-top: 0.5px white solid;
+}
+
+.card-box{
+	border: 1px white solid;
+	padding: 3px;
 }
 
 .card-footer{
@@ -60,7 +70,7 @@
 	height: 200px;
 }
 .card-3{
-	height: 150px;
+	height: 175px;
 }
 .card-2{
 	height: 100px;
