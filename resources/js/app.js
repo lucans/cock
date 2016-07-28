@@ -34,16 +34,10 @@ var app = angular.module('cock', ['ui.router'])
         return this.date.getHours() + ':' + this.date.getMinutes();
     } 
 
-    // this.getHourMinute = function (){
-    //     return this.date.getHours() + ':' + this.date.getMinutes();
-    // }    
-
-    // this.getHourMinuteSecond = function (){
-    //     return this.date.getHours() + ':' + this.date.getMinutes();
-    // }
-
     this.toPayDay = function (){
-        return this.payment +  this.date;
+        var febDate  = new Date(2010, 1, 14); //Month is 0-11 in JavaScript
+        febDate.setDate(30);
+        return febDate.toDateString();
     };
 
 });
