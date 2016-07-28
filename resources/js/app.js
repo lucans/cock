@@ -1,3 +1,5 @@
+const SERVER_PATH = "../server/";
+
 var app = angular.module('cock', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -48,8 +50,26 @@ var app = angular.module('cock', ['ui.router'])
 
 app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', function ($s, $http, $rs, Date) {  
   
-    $s.today = Date.toPayDay();
-    console.log($s.today);
+    // $s.today = Date.toPayDay();
+    // console.log($s.today);
+
+
+    $s.selectUsers = function(tipo, oParametros){
+
+
+      console.log(tipo, oParametros);
+
+        var url = SERVER_PATH + 'select.php?p=';
+        
+        $http.get(url + tipo + oParametros).success(function (result) {
+            $s.users = result;
+        });
+          
+        // $http.post("dao/add.php?p=" + sRequestName, {
+        //     oParametros: oParametros
+        // });
+    }
+
 
 }]);
 

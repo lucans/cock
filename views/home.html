@@ -22,7 +22,7 @@
 		</div>
 	</div>
 
-	<div class="deep-purple  card white-text card-3 col-xs-6">
+	<div class="deep-purple  card white-text card-6 col-xs-6">
 		<div class="card-heading deep-purple">Produtividade</div>
 		<div class="card-body">
 			<h3 class="card-title deep-purple">{{horas_produtividade}}</h1>
@@ -34,9 +34,12 @@
 			
 			<div class="card-footer">
 				<div class="input-group">
-			      <input type="text" class="form-control" placeholder="Valor">
+
+			      <input type="text" ng-model="user.coduser" class="form-control" placeholder="Valor">
+			      <input type="text" ng-model="user.nome" class="form-control" placeholder="Valor">
+
 			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+			        <button class="btn btn-default" type="button" ng-click="selectUsers('select', user)"><i class="fa fa-plus"></i></button>
 			      </span>
 			    </div>
 			</div>
