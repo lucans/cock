@@ -47,17 +47,35 @@ app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', func
     // $s.today = Date.toPayDay();
     // console.log($s.today);
 
+    $s.dao = function(tipo, table, funcao, oParametros){
+      switch(tipo){
+        case 'get':
+          $http.get("server/dao/get.php?table=" + table + "&f=" + funcao + "&p=" + oParametros).success(function (result) {
+              return result;
+          });
+          break;        
+        case 'post':
+          $http.post("server/dao/add.php?table=" + table + "&f=" + funcao + "&p=" + oParametros).success(function (result) {
+              return result;
+          });
+          break;        
+        case 'put':
+          $http.put("server/dao/update.php?table=" + table + "&f=" + funcao +  "&p=" +  oParametros).success(function (result) {
+              return result;
+          });
+          break;
+        default:
+          console.log("Nothing at all.");
+      }
+    };
 
-    $s.selectUsers = function(tipo, oParametros){
 
+    $s.selectUsers = function(){
 
-      console.log(tipo, oParametros);
+      $s.users = $s.dao('get','users');
 
-        var url = SERVER_PATH + 'select.php?p=';
-        
-        $http.get(url + tipo + oParametros).success(function (result) {
-            $s.users = result;
-        });
+      console.log($s.users);
+
           
         // $http.post("dao/add.php?p=" + sRequestName, {
         //     oParametros: oParametros
