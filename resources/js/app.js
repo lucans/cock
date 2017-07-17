@@ -8,7 +8,7 @@ var app = angular.module('cock', ['ui.router'])
         .state('menu', {
           url: "/app",
           templateUrl: "partials/menu.html",
-          controller: "menuCtrl"
+          controller: "homeCtrl"
         })
         .state('menu.home', {
           url: "/Home",
@@ -32,7 +32,7 @@ var app = angular.module('cock', ['ui.router'])
 
     this.getHour = function (){
         return this.date.getHours() + ':' + this.date.getMinutes();
-    } 
+    }
 
     this.toPayDay = function (){
         var febDate  = new Date(2010, 1, 14); //Month is 0-11 in JavaScript
@@ -42,10 +42,16 @@ var app = angular.module('cock', ['ui.router'])
 
 });
 
-app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', function ($s, $http, $rs, Date) {  
-  
-    // $s.today = Date.toPayDay();
-    // console.log($s.today);
+app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', function ($s, $http, $rs, Date) {    
+
+    $s.dados = {
+      "user": [
+          { "nome":"Lucas", "email": "lucas@lucans.com.br" }              
+      ],
+      "numeros": [
+          { "salario": 1550.55, "dias_trabalhados": 24, "proximo_salario" : 17, "horas_produtividade" : 56}          
+      ],
+   }
 
     $s.dao = function(tipo, table, funcao, oParametros){
       switch(tipo){
@@ -58,7 +64,7 @@ app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', func
           $http.post("server/dao/add.php?table=" + table + "&f=" + funcao + "&p=" + oParametros).success(function (result) {
               return result;
           });
-          break;        
+          break;
         case 'put':
           $http.put("server/dao/update.php?table=" + table + "&f=" + funcao +  "&p=" +  oParametros).success(function (result) {
               return result;
@@ -70,23 +76,4 @@ app.controller("homeCtrl", ['$scope', '$http', '$rootScope','DateProvider', func
     };
 
 
-    $s.selectUsers = function(){
-
-      $s.users = $s.dao('get','users');
-
-      console.log($s.users);
-
-          
-        // $http.post("dao/add.php?p=" + sRequestName, {
-        //     oParametros: oParametros
-        // });
-    }
-
-
 }]);
-
-app.controller("menuCtrl", ['$scope', '$http', '$rootScope', function ($s, $http, $rs) {                  
-
-}]);
-
-
