@@ -1,72 +1,67 @@
-<div class="container">
-<div class="col-xs-6">	
+<div class="row">
 
-	<div class="blue  white-text card col-xs-12">
-		<div class="card-heading blue">Mês</div>
+	<div class="col s6">	
 
-		<div class="card-body">
-			<h3 class="card-title">R$ {{dados.numeros[0].salario}}</h3>
-		
-			<!-- <div class="input-group">
-				<span class="input-group-addon" id="basic-addon1">Salário</span>
-				<input type="text" class="form-control" placeholder="Valor mensal">		
-
-				<span class="input-group-addon" id="basic-addon1">Dias úteis</span>
-				<input type="text" class="form-control" placeholder="Dias trabalhados" aria-describedby="basic-addon1">
-			</div>	 -->
-		</div>	
-	</div>	
-
-
-	<div class="blue-grey white-text card card-3 col-xs-6">
-		<div class="card-heading blue-grey">Próximo salário</div>
-		<div class="card-body">
-			<h3 class="card-title blue-grey">{{dados.numeros[0].proximo_salario}} dias</h3>
-
-			<h5 class="col-xs-2 col-xs-offset-2 card-box">15</h5>
-			<h5 class="col-xs-2 col-xs-offset-1 card-box">32</h5>
-			<h5 class="col-xs-2 col-xs-offset-1 card-box">20</h5>
-						
+		<div class="col s6">
+			<div class="card blue white-text">
+				<div class="card-content">
+				<span class="card-title blue darken-1">Mês</span>
+					<h3 class="card-title">R$ {{dados.numeros[0].salario}}</h3>
+				</div>	
+			</div>	
 		</div>
-	</div>
 
-	<div class="deep-purple  card white-text card-3 col-xs-6">
-		<div class="card-heading deep-purple">Produtividade</div>
-		<div class="card-body">
-			<h3 class="card-title deep-purple">{{dados.numeros[0].horas_produtividade}} horas</h3>
-			<h5 class="card-title deep-purple">{{dados.numeros[0].horas_produtividade}} horas</h5>
-			
-			
-			<!-- <h5 class="col-xs-4 col-xs-offset-1 card-box">{{vezes_produtivid / }}</h5> -->
-			<!-- <h5 class="col-xs-5 col-xs-offset-1 card-box">R$ 19.00</h5> -->
-			
-			
-			<div class="card-footer">
-				<div class="input-group">
-			      <input type="text" class="form-control" placeholder="Digite a tarefa">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button"><i class="fa fa-play"></i></button>
-			        <button class="btn btn-default" type="button"><i class="fa fa-pause"></i></button>
-			        <button class="btn btn-default" type="button"><i class="fa fa-stop"></i></button>
-			      </span>
-			    </div>
+
+		<div class="col s6">
+			<div class="card blue-grey white-text">
+				<div class="card-content">
+				<span class="card-title blue-grey darken-1">Próximo salário</div>
+				
+					<h3 class="card-title blue-grey">{{dados.numeros[0].proximo_salario}} dias</h3>
+					<h5 class="col-xs-2 col-xs-offset-2 card-box">15</h5>
+					<h5 class="col-xs-2 col-xs-offset-1 card-box">32</h5>
+					<h5 class="col-xs-2 col-xs-offset-1 card-box">20</h5>
+								
+				</div>
 			</div>
-	    </div>
+		</div>
+
+		<div class="col s6">
+			<div class="card deep-purple white-text">
+				<div class="card-content">
+				<div class="card-title deep-purple darken-1">Produtividade</div>
+					<h3 class="card-title deep-purple">{{dados.numeros[0].horas_produtividade}} horas</h3>
+					<h5 class="card-title deep-purple">{{dados.numeros[0].horas_produtividade}} horas</h5>
+			    </div>
+				
+				<div class="card-action">
+					<div class="input-group">
+				      <input type="text" class="form-control" placeholder="Digite a tarefa">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button"><i class="fa fa-play"></i></button>
+				        <button class="btn btn-default" type="button"><i class="fa fa-pause"></i></button>
+				        <button class="btn btn-default" type="button"><i class="fa fa-stop"></i></button>
+				      </span>
+				    </div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 </div>
 
-<div class="col-xs-5 col-xs-onset-1">
+<!-- <div class="col s6">
 
-	<div class="red  card white-text card-3 col-xs-12">
+	<div class="red  card white-text card-3 col s12">
 		<div class="card-heading red">Custos</div>
-		<div class="card-body">
+		<div class="card-content">
 			<h3 class="card-title red">R$ 95.00</h1>
 			
 			<h5 class="col-xs-4 col-xs-offset-1 card-box">17</h5>
 			<h5 class="col-xs-5 col-xs-offset-1  card-box">R$ 34.00</h5>
 			
-			<div class="card-footer">
+			<div class="card-action">
 				<div class="input-group">
 			      <input type="text" class="form-control" placeholder="Valor">
 			      <span class="input-group-btn">
@@ -77,16 +72,16 @@
 	    </div>
 	</div>
 
-	<div class="green  card white-text card-3 col-xs-6">
+	<div class="green card white-text card-3 col s6">
 		<div class="card-heading green">Transporte</div>
-		<div class="card-body">
+		<div class="card-content">
 			<h3 class="card-title green">R$ 45.00</h1>
 			
 
 			<h5 class="col-xs-4 col-xs-offset-1 card-box">17</h5>
 			<h5 class="col-xs-5 col-xs-offset-1  card-box">R$ 5.00</h5>
 			
-			<div class="card-footer">
+			<div class="card-action">
 				<div class="input-group">
 			      <input type="text" class="form-control" placeholder="Valor">
 			      <span class="input-group-btn">
@@ -97,9 +92,9 @@
 	    </div>
 	</div>
 
-	<div class="brown  card white-text card-3 col-xs-6">
+	<div class="brown  card white-text card-3 col s6">
 		<div class="card-heading brown ">Refeição</div>
-		<div class="card-body">
+		<div class="card-content">
 			<h3 class="card-title brown ">R$ 98.00</h1>
 			
 			
@@ -107,7 +102,7 @@
 			<h5 class="col-xs-5 col-xs-offset-1 card-box">R$ 19.00</h5>
 			
 			
-			<div class="card-footer">
+			<div class="card-action">
 				<div class="input-group">
 			      <input type="text" class="form-control" placeholder="Valor">
 			      <span class="input-group-btn">
@@ -118,5 +113,6 @@
 	    </div>
 	</div>
 
-</div>
+</div> -->
+
 </div>

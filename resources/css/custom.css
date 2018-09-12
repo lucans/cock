@@ -1,0 +1,16 @@
+.card{
+	border-radius: 3px;
+}
+
+.card .card-content{
+	padding: 0;
+}
+
+.card .card-content .card-title{
+	text-transform: uppercase;
+	padding: 6px;
+}
+
+.card-title::first-letter{
+	font-weight: 500;
+}
